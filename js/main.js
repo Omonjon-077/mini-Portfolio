@@ -64,7 +64,8 @@ themeButton.addEventListener('click', () => {
 function scrollUp(){
     const scrollUp = document.getElementById('scroll-up');
     // When the scroll is higher than 200 viewport height, add the show-scroll class to the a tag with the scroll-top class
-    if(this.scrollY >= 200) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
+    if(this.scrollY >= 200) scrollUp.classList.add('show-scroll'); 
+    else scrollUp.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollUp)
 
@@ -78,4 +79,4 @@ const sr = ScrollReveal({
 
 sr.reveal('.profile__border')
 sr.reveal('.profile__name, .profile__profession, .profile__social, .profile__buttons, .filters__content, .filters__content, .filters', { delay: 500 })
-sr.reveal('.profile__info-group, .projects__card', { interval: 200 })
+sr.reveal('.profile__info-group, .projects__card', { interval: 200, origin: 'bottom' })
